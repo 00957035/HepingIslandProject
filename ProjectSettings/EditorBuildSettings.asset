@@ -5,10 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/BoatScene.unity
     guid: 587c0ce49ef3fdd49b8ea3c411f83f00
+  - enabled: 1
+    path: Assets/Scenes/start.unity
+    guid: e1c498a70fd9db742bb7fbc254b6a37b
+  - enabled: 1
+    path: Assets/Scenes/MuseumScene.unity
+    guid: 3b46d6b76969c8b409201b1505356e39
+  - enabled: 1
+    path: Assets/Scenes/GameLobbyScene.unity
+    guid: 7b3f01a8f3fe6534a876b85bbcdc7a39
+  - enabled: 1
+    path: Assets/Scenes/ShoppingScene.unity
+    guid: 05a53423baa83ad4b8130f77a0ed3769
   m_configObjects: {}
