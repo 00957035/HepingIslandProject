@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShoppingScene.unity
     guid: 05a53423baa83ad4b8130f77a0ed3769
+  - enabled: 1
+    path: Assets/Scenes/BoatGameScene.unity
+    guid: 83c0a6f9b2380f24cbde75f38eed3673
   m_configObjects: {}

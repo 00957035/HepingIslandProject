@@ -9,9 +9,9 @@ public class playerMovement : MonoBehaviour
     private float speedOne = 0f; //實際速度
     private float speedMax = 120f; //最大速度
     private float speedMin = -20f; //最小速度
-    private float speedUp = 2f; //加速加速度
+    private float speedUp = 50f; //加速加速度
     private float speedDown = 4f; //減速加速度
-    private float speedTend = 0.5f; //無操作時 速度超過0的加速度
+    private float speedTend = 5f; //無操作時 速度超過0的加速度
     private float speedBack = 1f; //後退加速度
 
     private Transform m_Transform;
@@ -26,6 +26,9 @@ public class playerMovement : MonoBehaviour
         playerMove();
     }
     void playerMove(){
+        if(Input.GetKey(KeyCode.Z)){
+            speedOne = 0f;
+        }
         if(Input.GetKey(KeyCode.Q) && speedOne<speedMax){ //前進加速 Q左前 
             speedOne = speedOne + Time.deltaTime * speedUp; //加速
             m_Transform.Rotate(0, 25f * Time.deltaTime, 0); //轉向

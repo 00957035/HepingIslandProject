@@ -10,7 +10,9 @@ public class playerControl : MonoBehaviour
     public GameObject ChangeCanva;
     public Text title;
     public void OnCollisionEnter(Collision collision){ //collision為被碰之物件
+    
         if(collision.gameObject.name.Contains("Cube1")){
+            
             //SceneManager.LoadScene(collision.gameObject.GetComponent<sceneInfo>().SceneName);
             //goTo = collision.gameObject.GetComponent<sceneInfo>().SceneName;
             ChangeCanva.GetComponent<changeInfo>().changeGoTo(collision.gameObject.GetComponent<sceneInfo>().SceneName);
