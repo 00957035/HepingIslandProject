@@ -13,7 +13,7 @@ public class transferManger : MonoBehaviour
     public Text sceneTitle;
     public Text sceneIntroducion;
     public sceneInformation[] sceneList = new sceneInformation[3];
-	private int sceneIdx;
+	private int sceneIdx = 1;
 
     public void showTransferMunu(){
         transferMenu.SetActive(true);
@@ -38,4 +38,5 @@ public class transferManger : MonoBehaviour
         Debug.Log(sceneIdx);
         SceneManager.LoadScene(sceneList[sceneIdx].sceneLink);
     }
+
 }

@@ -1730,7 +1730,6 @@ MonoBehaviour:
   sceneInfo: {fileID: 1896156718}
   sceneTitle: {fileID: 239230993}
   sceneIntroducion: {fileID: 779236549}
-  sceneIdx: 1
   sceneList:
   - sceneName: "\u548C\u5E73\u5CF6\u5546\u57CE"
     sceneIntroduce: "\u8CB7\u8CB7\u8CB7\u8CB7\u8CE3\u8CE3\u8CE3\u8CE3\u6771ccc"
