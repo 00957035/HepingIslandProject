@@ -20,5 +20,6 @@ public class Npc : MonoBehaviour
    }*/
     void OnMouseDown(){
         dialogue.SetActive(true);
+
     }
 }

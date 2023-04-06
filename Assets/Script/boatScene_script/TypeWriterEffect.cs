@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class TypeWriterEffect : MonoBehaviour
 {
     // Start is called before the first frame update
-    
     Text showText;
     string showStr;
     void Start()
