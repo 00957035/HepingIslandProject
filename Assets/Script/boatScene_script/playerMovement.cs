@@ -27,7 +27,7 @@ public class playerMovement : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision){ //collision為被碰之物件
         //Debug.Log(collision.gameObject.name);
-        speedOne = 0f;
+        speedOne = speedOne * -1;
     }
     
     void playerMove(){
