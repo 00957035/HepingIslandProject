@@ -26,7 +26,6 @@ public class raycastController : MonoBehaviour
             name = hit.collider.gameObject.name;
             if(name == tempname){
                 timer += Time.deltaTime;
-                Debug.Log(timer);
             }
             else{
                 timer = 0;
