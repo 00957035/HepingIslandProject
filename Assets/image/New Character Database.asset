@@ -19,3 +19,15 @@ MonoBehaviour:
     CharSprite: {fileID: 21300000, guid: f25dfa6de3233da4bb6fe2a3220fa81c, type: 3}
   - CharName: Kelson
     CharSprite: {fileID: 21300000, guid: 2daa39110b7d60242b4f793800c55f91, type: 3}
+  - CharName: Catherine
+    CharSprite: {fileID: 21300000, guid: 19ad6335524a6a64caccbface7f3c003, type: 3}
+  - CharName: Christine
+    CharSprite: {fileID: 21300000, guid: ea6c2d4f72fa79946ba8366aa0e35abe, type: 3}
+  - CharName: Crystal
+    CharSprite: {fileID: 21300000, guid: 25d0aa001ef099942a1674dffdad76b6, type: 3}
+  - CharName: Sabrina
+    CharSprite: {fileID: 21300000, guid: 89d99f18bc60a964689423787f23c2ac, type: 3}
+  - CharName: "Nicole\t"
+    CharSprite: {fileID: 21300000, guid: dafbc0aa13b90b8469334d14ed216a9f, type: 3}
+  - CharName: Gloria
+    CharSprite: {fileID: 21300000, guid: 7983c6c2052ba57459d38698186cd0d0, type: 3}

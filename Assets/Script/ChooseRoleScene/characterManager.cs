@@ -7,44 +7,55 @@ public class characterManager : MonoBehaviour
 {
     public characterDatabase characterDB;
 
-    public Text nameText;
+    public Text[] nameText = new Text[3];
     //public Sprite currimage;
 
     private int selectedOption = 0;
+    private int RoleNumber = 9;
     void Start()
     {
         UpdateCharater(selectedOption);
+        //RoleNumber = characterDB.CharacterCount;
     }
 
     // Update is called once per frame
     public void NextOption()
     {
-        selectedOption++;
-        if(selectedOption >= characterDB.CharacterCount)
-        {
-            selectedOption = 0;
-        }
+        //selectedOption++;
+        selectedOption = (++selectedOption) % RoleNumber;
+        //if(selectedOption >= characterDB.CharacterCount)
+        //{
+        //    selectedOption = 0;
+        //}
         UpdateCharater(selectedOption);
     }
 
     public void BackOption()
     {
-        selectedOption--;
-        if (selectedOption < 0)
-        {
-            selectedOption = characterDB.CharacterCount-1;
-        }
+        //selectedOption--;
+
+        Debug.Log(-1%9);
+        selectedOption = (--selectedOption + RoleNumber) % RoleNumber;
+        //if (selectedOption < 0)
+        //{
+        //    selectedOption = characterDB.CharacterCount-1 ;
+        //}
         UpdateCharater(selectedOption);
     }
 
     private void UpdateCharater(int selectedOption)
     {
-        character role = characterDB.GetCharactor(selectedOption);
-        Image image = GameObject.Find("ROLE1").GetComponent<Image>();
+        for(int i = 0; i < 3; i++)
+        {
+            character role = characterDB.GetCharactor(selectedOption);//get role info from database
+            string aim = "ROLE" + (i+1);
+            Image image = GameObject.Find(aim).GetComponent<Image>();//find ROLE1 ROLE2 ROLE3 OBJ
+            image.sprite = role.CharSprite;
+            nameText[i].text = role.CharName;
+            //Debug.Log("Image Name: " + image.name + "type: " + role.CharSprite);
+            selectedOption = (++selectedOption) % RoleNumber;
+        }
         //currimage = GameObject.Find("ROLE1").GetComponent<Sprite>();
-        image.sprite = role.CharSprite;
-        nameText.text = role.CharName;
-        Debug.Log("Image Name: " + image.name + "type: " + role.CharSprite);
 
     }
 }
