@@ -9,7 +9,7 @@ public class inputController : MonoBehaviour
     public InputField inputField;
     public GameObject museum;
     Transform searchTransform;
-    GameObject targetPoint;
+    public GameObject targetPoint;
     void Start()
     {
         
@@ -22,9 +22,13 @@ public class inputController : MonoBehaviour
     }
 
     public void OnEndEdit(string str){
-        searchTransform = museum.transform.Find(str);
-        targetPoint = museum.transform.Find("targetPoint").gameObject;
-        targetPoint.SetActive(true);
-        targetPoint.transform.position = new Vector3(searchTransform.position.x, searchTransform.position.y + 5, searchTransform.position.z + 4);
+        foreach(Transform child in museum.transform){
+            if(child.gameObject.name.Contains(str)){
+                targetPoint.SetActive(true);
+                GameObject insTargetPoint = Instantiate(targetPoint);
+                insTargetPoint.transform.position = new Vector3(child.position.x, child.position.y + 5, child.position.z);
+            }
+        }
+       
     }
 }
