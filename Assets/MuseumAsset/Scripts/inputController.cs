@@ -26,7 +26,7 @@ public class inputController : MonoBehaviour
             if(child.gameObject.name.Contains(str)){
                 targetPoint.SetActive(true);
                 GameObject insTargetPoint = Instantiate(targetPoint);
-                insTargetPoint.transform.position = new Vector3(child.position.x, child.position.y + 5, child.position.z);
+                insTargetPoint.transform.position = new Vector3(child.position.x, child.position.y + 12, child.position.z);
             }
         }
        
