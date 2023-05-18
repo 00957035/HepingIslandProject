@@ -8,8 +8,11 @@ public class inputController : MonoBehaviour
     // Start is called before the first frame update
     public InputField inputField;
     public GameObject museum;
-    Transform searchTransform;
     public GameObject targetPoint;
+    public GameObject btn;
+    public GameObject text;
+    public GameObject image;
+    List<GameObject> instantiatedPrefabs = new List<GameObject>();
     void Start()
     {
         
@@ -22,13 +25,34 @@ public class inputController : MonoBehaviour
     }
 
     public void OnEndEdit(string str){
-        foreach(Transform child in museum.transform){
-            if(child.gameObject.name.Contains(str)){
-                targetPoint.SetActive(true);
-                GameObject insTargetPoint = Instantiate(targetPoint);
-                insTargetPoint.transform.position = new Vector3(child.position.x, child.position.y + 12, child.position.z);
+        bool flag = false;
+        if(instantiatedPrefabs != null){
+            foreach(GameObject prefabs in instantiatedPrefabs){
+                Destroy(prefabs);
             }
         }
-       
+        foreach(Transform child in museum.transform){
+            if(child.gameObject.name.Contains(str)){
+                flag = true;
+                targetPoint.SetActive(true);
+                GameObject insTargetPoint = Instantiate(targetPoint);
+                insTargetPoint.transform.position = new Vector3(child.position.x, child.position.y + 9, child.position.z);
+                instantiatedPrefabs.Add(insTargetPoint);
+            } 
+        }
+        if(!flag){
+            text.gameObject.SetActive(true);
+            btn.gameObject.SetActive(true);
+            image.gameObject.SetActive(true);
+            foreach(GameObject prefabs in instantiatedPrefabs){
+                Destroy(prefabs);
+            }
+        }
+    }
+
+    public void Confirm(){
+        text.gameObject.SetActive(false);
+        btn.gameObject.SetActive(false);
+        image.gameObject.SetActive(false);
     }
 }
