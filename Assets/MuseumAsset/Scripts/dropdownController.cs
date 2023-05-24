@@ -9,16 +9,24 @@ public class dropdownController : MonoBehaviour
     public Dropdown dropdown;
     public GameObject museum;
     public GameObject spotlight;
+    public GameObject thirdPerson;
     List<GameObject> flag = new List<GameObject>();
+    LineRenderer line;
+    Vector3 searchObjectPosition = new Vector3();
+    
     void Start()
     {
-        
+        line = thirdPerson.GetComponent<LineRenderer>();
+        line.positionCount = 2;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(dropdown.value != 0){
+            line.SetPosition(0, thirdPerson.transform.position);
+            line.SetPosition(1, searchObjectPosition);
+        }
     }
 
     public void OnValueChanged(int num){
@@ -33,6 +41,7 @@ public class dropdownController : MonoBehaviour
                 GameObject insSpotlight = Instantiate(spotlight);
                 insSpotlight.transform.position = new Vector3(child.position.x, child.position.y + 5, child.position.z);
                 flag.Add(insSpotlight);
+                searchObjectPosition = child.position;
             }
         }
     }
