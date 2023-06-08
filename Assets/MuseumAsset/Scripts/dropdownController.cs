@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class dropdownController : MonoBehaviour
 {
     // Start is called before the first frame update
     public Dropdown dropdown;
-    public GameObject museum;
+    public GameObject artgallery;
     public GameObject spotlight;
     public GameObject thirdPerson;
     List<GameObject> flag = new List<GameObject>();
     LineRenderer line;
+    NavMeshAgent agent;
     Vector3 searchObjectPosition = new Vector3();
     
     void Start()
     {
         line = thirdPerson.GetComponent<LineRenderer>();
         line.positionCount = 2;
+        agent = thirdPerson.GetComponent<NavMeshAgent>(); //獲取人物NavMeshAgent
     }
 
     // Update is called once per frame
@@ -35,7 +38,7 @@ public class dropdownController : MonoBehaviour
                 Destroy(prefab);
             }
         }
-        foreach(Transform child in museum.transform){
+        foreach(Transform child in artgallery.transform){
             if(child.gameObject.tag == dropdown.options[num].text){
                 spotlight.SetActive(true);
                 GameObject insSpotlight = Instantiate(spotlight);
@@ -44,6 +47,7 @@ public class dropdownController : MonoBehaviour
                 searchObjectPosition = child.position;
             }
         }
+        agent.SetDestination(searchObjectPosition);
     }
 
 }
