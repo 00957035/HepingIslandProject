@@ -24,8 +24,8 @@ public class dropdownController : MonoBehaviour
     void Update()
     {
         if(dropdown.value != 0){
-            line.SetPosition(0, thirdPerson.transform.position);
-            line.SetPosition(1, searchObjectPosition);
+            //line.SetPosition(0, thirdPerson.transform.position);
+            //line.SetPosition(1, searchObjectPosition);
         }
     }
 

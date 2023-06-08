@@ -15458,12 +15458,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: eed4abbdbeefdfd49b056b5494523ff3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.54333335
+      value: 0.456
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eed4abbdbeefdfd49b056b5494523ff3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.03
+      value: 1.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eed4abbdbeefdfd49b056b5494523ff3,
         type: 3}
@@ -88634,6 +88634,7 @@ GameObject:
   - component: {fileID: 3924232458410706978}
   - component: {fileID: 3763447767804557972}
   - component: {fileID: 3280927520339254326}
+  - component: {fileID: 6919683764383126897}
   m_Layer: 0
   m_Name: Cylinder.009
   m_TagString: Untagged
@@ -88641,6 +88642,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &6919683764383126897
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6919683764383126896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000007, y: 0.020000005, z: 0.020000007}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &6919861768550189604
 Transform:
   m_ObjectHideFlags: 0
