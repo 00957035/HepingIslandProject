@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 
-public class dropdownController : MonoBehaviour
+public class dropdownController : MonoBehaviour //小注意，這是掛在dropdownlist上的，不是人物
 {
     // Start is called before the first frame update
     public Dropdown dropdown;
@@ -29,8 +29,9 @@ public class dropdownController : MonoBehaviour
     void Update()
     {
         if(dropdown.value != 0){
-            //line.SetPosition(0, thirdPerson.transform.position);
-            //line.SetPosition(1, searchObjectPosition);
+            NavMesh.CalculatePath(thirdPerson.transform.position, searchObjectPosition, NavMesh.AllAreas, path);
+            line.SetPosition(0, path.corners[0]);
+            line.SetPosition(1, path.corners[1]);
         }
     }
 
@@ -49,13 +50,14 @@ public class dropdownController : MonoBehaviour
                 searchObjectPosition = child.position;
             }
         }
-        Debug.Log(transform.position);
-        Debug.Log(searchObjectPosition);
-        NavMesh.CalculatePath(transform.position, searchObjectPosition, NavMesh.AllAreas, path);
-        Debug.Log(path.corners.Length);
-        for(int i = 0; i < path.corners.Length - 1; i++){
-            Debug.Log(path.corners[i]);
+        NavMeshHit navMeshHit;
+        if (NavMesh.SamplePosition(searchObjectPosition, out navMeshHit, 100.0f, NavMesh.AllAreas))
+        {
+            searchObjectPosition = navMeshHit.position;
         }
+        NavMesh.CalculatePath(thirdPerson.transform.position, searchObjectPosition, NavMesh.AllAreas, path);
+        line.SetPosition(0, path.corners[0]);
+        line.SetPosition(1, path.corners[1]);
     }
 
 }
