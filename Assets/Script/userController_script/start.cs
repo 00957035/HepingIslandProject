@@ -19,7 +19,7 @@ public class start : MonoBehaviour
     public void login(){
         Debug.Log("login");
         loginCanvas.SetActive(false);
-        startCanvas.SetActive(false);
+        startCanvas.SetActive(true);
         playerInfoCanvas.SetActive(true);
 
     }
