@@ -14,6 +14,7 @@ public class dropdownController : MonoBehaviour
     List<GameObject> flag = new List<GameObject>();
     LineRenderer line;
     NavMeshAgent agent;
+    NavMeshPath path;
     Vector3 searchObjectPosition = new Vector3();
     
     void Start()
@@ -21,6 +22,7 @@ public class dropdownController : MonoBehaviour
         line = thirdPerson.GetComponent<LineRenderer>();
         line.positionCount = 2;
         agent = thirdPerson.GetComponent<NavMeshAgent>(); //獲取人物NavMeshAgent
+        path = new NavMeshPath();
     }
 
     // Update is called once per frame
@@ -47,7 +49,13 @@ public class dropdownController : MonoBehaviour
                 searchObjectPosition = child.position;
             }
         }
-        agent.SetDestination(searchObjectPosition);
+        Debug.Log(transform.position);
+        Debug.Log(searchObjectPosition);
+        NavMesh.CalculatePath(transform.position, searchObjectPosition, NavMesh.AllAreas, path);
+        Debug.Log(path.corners.Length);
+        for(int i = 0; i < path.corners.Length - 1; i++){
+            Debug.Log(path.corners[i]);
+        }
     }
 
 }
