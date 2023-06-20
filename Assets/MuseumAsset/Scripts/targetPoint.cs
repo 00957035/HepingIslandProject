@@ -15,6 +15,6 @@ public class targetPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(thirdPerson.transform.position.x, thirdPerson.transform.position.y, thirdPerson.transform.position.z);
+        transform.position = new Vector3(thirdPerson.transform.position.x, thirdPerson.transform.position.y + 8, thirdPerson.transform.position.z);
     }
 }
