@@ -8,6 +8,7 @@ TagManager:
   - "\u82B1\u8C79\u5CA9"
   - "\u9ED1\u9CF6\u5CA9"
   - Picture
+  - obstacle
   layers:
   - Default
   - TransparentFX
