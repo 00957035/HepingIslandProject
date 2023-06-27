@@ -8,7 +8,7 @@ public class dropdownController : MonoBehaviour //小注意，這是掛在dropdo
 {
     // Start is called before the first frame update
     public Dropdown dropdown;
-    public GameObject artgallery;
+    public GameObject rocks;
     public GameObject spotlight;
     public GameObject thirdPerson;
     List<GameObject> flag = new List<GameObject>();
@@ -41,7 +41,7 @@ public class dropdownController : MonoBehaviour //小注意，這是掛在dropdo
                 Destroy(prefab);
             }
         }
-        foreach(Transform child in artgallery.transform){
+        foreach(Transform child in rocks.transform){
             if(child.gameObject.tag == dropdown.options[num].text){
                 spotlight.SetActive(true);
                 GameObject insSpotlight = Instantiate(spotlight);

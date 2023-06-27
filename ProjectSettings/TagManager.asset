@@ -9,6 +9,12 @@ TagManager:
   - "\u9ED1\u9CF6\u5CA9"
   - Picture
   - obstacle
+  - "\u6D77\u86DE\u8753\u5CA9"
+  - "\u9C77\u9B5A\u5CA9"
+  - "\u6CD5\u8001\u5CA9"
+  - "\u4EBA\u9762\u7345\u8EAB\u5CA9"
+  - "\u6D77\u8C79\u5CA9"
+  - "\u91D1\u525B\u5CA9"
   layers:
   - Default
   - TransparentFX
