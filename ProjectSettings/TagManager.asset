@@ -15,6 +15,7 @@ TagManager:
   - "\u4EBA\u9762\u7345\u8EAB\u5CA9"
   - "\u6D77\u8C79\u5CA9"
   - "\u91D1\u525B\u5CA9"
+  - product
   layers:
   - Default
   - TransparentFX

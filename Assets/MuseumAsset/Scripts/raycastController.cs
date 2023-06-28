@@ -32,7 +32,7 @@ public class raycastController : MonoBehaviour
             }
             if(timer >= 2.0f){
                 otherTransform = hit.collider.gameObject.transform;
-                otherChildTransform = otherTransform.Find("Canvas");
+                otherChildTransform = otherTransform.Find("infoCanvas");
                 if(otherChildTransform != null){
                     otherChildObject = otherChildTransform.gameObject;
                     otherChildObject.SetActive(true);
@@ -44,7 +44,6 @@ public class raycastController : MonoBehaviour
                 }
             }
             tempname = hit.collider.gameObject.name;
-            
         }
     }
 }
