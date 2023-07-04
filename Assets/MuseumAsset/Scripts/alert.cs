@@ -7,6 +7,7 @@ public class alert : MonoBehaviour
     // Start is called before the first frame update
     public GameObject text;
     public GameObject button;
+    public GameObject backgroundImage;
     bool pressed = false;
     float startTime = 0.0f;
     float endTime = 0.0f;
@@ -23,6 +24,7 @@ public class alert : MonoBehaviour
             text.gameObject.GetComponent<Text>().text = "你已經玩了" + (int)endTime + "秒，該休息了!";
             text.SetActive(true);
             button.SetActive(true);
+            backgroundImage.SetActive(true);
         }
         
     }
@@ -30,6 +32,7 @@ public class alert : MonoBehaviour
     public void Pressed(){
         text.SetActive(false);
         button.SetActive(false);
+        backgroundImage.SetActive(false);
         pressed = true;
     }
 }
