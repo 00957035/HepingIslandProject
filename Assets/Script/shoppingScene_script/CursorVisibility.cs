@@ -6,7 +6,7 @@ public class CursorVisibility : MonoBehaviour
 {
     void OnLevelWasLoaded(int level)
     {
-        Cursor.visible = true;
+        //Cursor.visible = true;
         // Screen.lockCursor = false;
     }
 }
