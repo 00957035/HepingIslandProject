@@ -7180,7 +7180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &797740135
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9804,7 +9804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1054786491
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9873,7 +9873,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1106266010}
-        m_MethodName: timechanged
+        m_MethodName: lightchanged
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10736,10 +10736,12 @@ MonoBehaviour:
   portal: {fileID: 1101758611}
   bgm: {fileID: 905251160}
   time: {fileID: 1907524461}
+  directional_light: {fileID: 825709231}
   dropdownToggle: {fileID: 1271994351}
   portalToggle: {fileID: 1800610796}
   bgmToggle: {fileID: 797740134}
   timeToggle: {fileID: 1764493518}
+  lightToggle: {fileID: 1054786490}
 --- !u!20 &1111436711 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f,
@@ -11709,7 +11711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1271994352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15909,7 +15911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1764493519
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16080,7 +16082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1800610797
 RectTransform:
   m_ObjectHideFlags: 0
