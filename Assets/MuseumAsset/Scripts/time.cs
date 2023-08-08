@@ -19,6 +19,29 @@ public class time : MonoBehaviour
         int hour = currentTime.Hour;
         int min = currentTime.Minute;
         int sec = currentTime.Second;
-        text.text = hour + " : " + min + " : " + sec;
+        if(hour < 10 && min < 10 && sec < 10){
+            text.text = "0" + hour + " : " + "0" + min + " : " + "0" + sec;
+        }
+        else if(hour < 10 && min < 10){
+            text.text = "0" + hour + " : " + "0" + min + " : " + sec;
+        }
+        else if(hour < 10 && sec < 10){
+            text.text = "0" + hour + " : " + min + " : " + "0" + sec;
+        }
+        else if(min < 10 && sec < 10){
+            text.text = hour + " : " + "0" + min + " : " + "0" + sec;
+        }
+        else if(hour < 10){
+            text.text = "0" + hour + " : " + min + " : " + sec;
+        }
+        else if(min < 10){
+            text.text = hour + " : " + "0" + min + " : " + sec;
+        }
+        else if(sec < 10){
+            text.text = hour + " : " + min + " : " + "0" + sec;
+        }
+        else{
+            text.text = hour + " : " + min + " : " + sec;
+        }
     }
 }
