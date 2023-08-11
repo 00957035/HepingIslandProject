@@ -33,9 +33,11 @@ public class ShowInfo : MonoBehaviour
     public void showInfoCanvas()
     {
         InfoCanvas.enabled = true;
+        print("showcanvas");
     }
     public void hideInfoCanvas()
     {
+        Application.OpenURL("https://play.niceday.tw/product/3235");
         InfoCanvas.enabled = false;
     }
 }
