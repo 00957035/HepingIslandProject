@@ -24,7 +24,7 @@ public class raycastController : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit)){
             name = hit.collider.gameObject.name;
-            Debug.Log(name);
+            //Debug.Log(name);
             if(name == tempname){
                 timer += Time.deltaTime;
             }
@@ -32,11 +32,13 @@ public class raycastController : MonoBehaviour
                 timer = 0;
             }
             if(timer >= 2.0f){
+                Debug.Log("應該要有");
                 otherTransform = hit.collider.gameObject.transform;
                 otherChildTransform = otherTransform.Find("infoCanvas");
                 if(otherChildTransform != null){
                     otherChildObject = otherChildTransform.gameObject;
                     otherChildObject.SetActive(true);
+                    Debug.Log(otherChildObject);
                 }
             }
             else{
