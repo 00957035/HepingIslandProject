@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class dropdownController : MonoBehaviour //小注意，這是掛在dropdownlist上的，不是人物
 {
@@ -29,9 +30,13 @@ public class dropdownController : MonoBehaviour //小注意，這是掛在dropdo
     void Update()
     {
         if(dropdown.value != 0){
+            line.positionCount = 2;
             NavMesh.CalculatePath(thirdPerson.transform.position, searchObjectPosition, NavMesh.AllAreas, path);
             line.SetPosition(0, path.corners[0]);
             line.SetPosition(1, path.corners[1]);
+        }
+        else if(dropdown.value == 0){
+            line.positionCount = 0;
         }
     }
 
