@@ -29,14 +29,24 @@ public class dropdownController : MonoBehaviour //小注意，這是掛在dropdo
     // Update is called once per frame
     void Update()
     {
-        if(dropdown.value != 0){
+        if(dropdown.value != 0){ //有選擇物件就導航
             line.positionCount = 2;
             NavMesh.CalculatePath(thirdPerson.transform.position, searchObjectPosition, NavMesh.AllAreas, path);
             line.SetPosition(0, path.corners[0]);
             line.SetPosition(1, path.corners[1]);
         }
-        else if(dropdown.value == 0){
+        else if(dropdown.value == 0){ //選擇取消導航則取消
             line.positionCount = 0;
+        }
+        float distance = Vector3.Distance(thirdPerson.transform.position, searchObjectPosition);
+        if(distance < 2.0){
+            dropdown.value = 0;
+            line.positionCount = 0;
+            if(flag != null){
+                foreach(GameObject prefab in flag){
+                    Destroy(prefab);
+                }
+            }
         }
     }
 
@@ -53,6 +63,9 @@ public class dropdownController : MonoBehaviour //小注意，這是掛在dropdo
                 insSpotlight.transform.position = new Vector3(child.position.x, child.position.y + 5, child.position.z);
                 flag.Add(insSpotlight);
                 searchObjectPosition = child.position;
+            }
+            else{
+                spotlight.SetActive(false);
             }
         }
         NavMeshHit navMeshHit;
