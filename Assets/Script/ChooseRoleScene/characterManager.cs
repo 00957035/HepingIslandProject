@@ -10,12 +10,12 @@ public class characterManager : MonoBehaviour
     public Text[] nameText = new Text[3];
     //public Sprite currimage;
 
-    private int selectedOption = 0;
-    private int RoleNumber = 9;
+    private static int selectedOption = 0;
+    private int RoleNumber = 1;
     void Start()
     {
-        UpdateCharater(selectedOption);
-        //RoleNumber = characterDB.CharacterCount;
+        //sUpdateCharater(selectedOption);
+        RoleNumber = characterDB.CharacterCount;
     }
 
     // Update is called once per frame
@@ -57,5 +57,10 @@ public class characterManager : MonoBehaviour
         }
         //currimage = GameObject.Find("ROLE1").GetComponent<Sprite>();
 
+    }
+
+    public int GetCurrentOption()
+    {
+        return selectedOption;
     }
 }
