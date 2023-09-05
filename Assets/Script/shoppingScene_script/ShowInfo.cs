@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ShowInfo : MonoBehaviour
 {
-    Canvas InfoCanvas;
+    public Canvas InfoCanvas; 
+    public Canvas IntroCanvas;
     public Camera cam;
     RaycastHit hitObj;
     void Start()
@@ -23,9 +24,12 @@ public class ShowInfo : MonoBehaviour
         {
             if (Physics.Raycast(mouseRay, out hitObj))
             {
-                print(hitObj.collider.gameObject.tag);
                 if (hitObj.collider.gameObject.tag == "car")
+                {
+                    print(hitObj.collider.gameObject.tag);
                     showInfoCanvas();
+                }
+                    
             }
         }
     }
@@ -37,5 +41,13 @@ public class ShowInfo : MonoBehaviour
     public void hideInfoCanvas()
     {
         InfoCanvas.enabled = false;
+    }
+    public void hideIntroCanvas()
+    {
+        IntroCanvas.enabled = false;
+    }
+    public void OpenWeb()
+    {
+        Application.OpenURL("https://play.niceday.tw/product/3235");
     }
 }
