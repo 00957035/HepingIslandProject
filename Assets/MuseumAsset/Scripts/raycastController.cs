@@ -8,9 +8,11 @@ public class raycastController : MonoBehaviour
     string name = "";
     string tempname = "";
     float timer = 0.0f;
-    Transform otherTransform;
+    Transform remindTransform; //提醒
+    Transform remindChildTransform;
+    GameObject remindGameObject;
+    Transform otherTransform; //介紹
     Transform otherChildTransform; 
-
     GameObject otherChildObject;
     void Start()
     {
@@ -31,8 +33,21 @@ public class raycastController : MonoBehaviour
             else{
                 timer = 0;
             }
+            if(timer >= 0.2){
+                remindTransform = hit.collider.gameObject.transform;
+                remindChildTransform = remindTransform.Find("reminderCanvas");
+                if(remindChildTransform != null){
+                    remindGameObject = remindChildTransform.gameObject;
+                    remindGameObject.SetActive(true);
+                }
+            }
+            else{
+                if(remindGameObject != null){
+                    remindGameObject.SetActive(false);
+                }
+            }
             if(timer >= 2.0f){
-                Debug.Log("應該要有");
+                remindGameObject.SetActive(false);
                 otherTransform = hit.collider.gameObject.transform;
                 otherChildTransform = otherTransform.Find("infoCanvas");
                 if(otherChildTransform != null){
