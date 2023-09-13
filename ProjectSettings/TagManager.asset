@@ -18,6 +18,7 @@ TagManager:
   - product
   - CinemachineTarget
   - car
+  - "\u5F48\u5857\u9B5A\u5CA9"
   layers:
   - Default
   - TransparentFX
