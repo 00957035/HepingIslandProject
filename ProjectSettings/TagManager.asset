@@ -19,6 +19,16 @@ TagManager:
   - CinemachineTarget
   - car
   - "\u5F48\u5857\u9B5A\u5CA9"
+  - The Black Kite
+  - The Boar Head
+  - The Crocodile
+  - The King Kong
+  - The Leopard
+  - The Sphinx
+  - The Sea Hare
+  - The Mudskipper
+  - The Pharaoh
+  - The Seal
   layers:
   - Default
   - TransparentFX
