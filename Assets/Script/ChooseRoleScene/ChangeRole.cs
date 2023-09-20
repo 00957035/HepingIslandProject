@@ -8,25 +8,20 @@ public class ChangeRole : MonoBehaviour
     public Animator animator;
     public Avatar[] avatar;
     public GameObject[] role;
-    bool flag = true;
+    int selectedNum;
     void Start()
     {
+        selectedNum = characterManager.selectedOption;
+        role[0].SetActive(false);
+        role[selectedNum].SetActive(true);
         
+        animator.avatar = avatar[selectedNum];
+        Debug.Log(selectedNum);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            //role index + 1
-            role[0].SetActive(!flag);
-            role[1].SetActive(flag);
-            if (flag)//megan
-                animator.avatar = avatar[1];
-            else
-                animator.avatar = avatar[0];
-            flag = !flag;
-        }
+       
     }
 }

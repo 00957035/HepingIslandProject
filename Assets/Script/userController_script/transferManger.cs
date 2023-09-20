@@ -13,16 +13,20 @@ public class transferManger : MonoBehaviour
     public Text sceneTitle;
     public Text sceneIntroducion;
     public sceneInformation[] sceneList = new sceneInformation[3];
-	private int sceneIdx = 1;
+	public int sceneIdx;
 
+     int getindex()
+    {
+        return sceneIdx;
+    }
     public void showTransferMunu(){
         transferMenu.SetActive(true);
     }
-    public void changeScene(int idx){
+    public void ChangeScene(int idx){
         sceneIdx = idx;
         sceneInfo.SetActive(true);
         setSceneInfo(sceneIdx);
-        Debug.Log(sceneIdx);
+        Debug.Log("index" + sceneIdx);
     }    
     public void exitSceneInfo(){
         sceneInfo.SetActive(false);
@@ -34,9 +38,14 @@ public class transferManger : MonoBehaviour
 		sceneTitle.text = sceneList[idx].sceneName;
         sceneIntroducion.text = sceneList[idx].sceneIntroduce;
 	}
-    public void transferToScene(){
-        Debug.Log(sceneIdx);
+    public  void transferToScene(){
+        int i = getindex();
+        Debug.Log("trans"+sceneIdx+"i:"+i);
         SceneManager.LoadScene(sceneList[sceneIdx].sceneLink);
+    }
+    public void test()
+    {
+        Debug.Log("test:"+sceneIdx);
     }
 
 }
