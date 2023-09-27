@@ -280,16 +280,15 @@ MonoBehaviour:
   sceneTitle: {fileID: 182516219}
   sceneIntroducion: {fileID: 240028258}
   sceneList:
-  - sceneName: "\u548C\u5E73\u5CF6\u5546\u57CE"
-    sceneIntroduce: "\u8CB7\u8CB7\u8CB7\u8CB7\u8CE3\u8CE3\u8CE3\u8CE3\u6771ccc"
-    sceneLink: ShoppingScene
-  - sceneName: "\u535A\u7269\u9928\u5C55\u5340"
-    sceneIntroduce: "\u4F86\u770B\u770B\u5C0F\u77E5\u8B58\u5427!!!!"
-    sceneLink: MuseumScene
-  - sceneName: "\u9AD4\u9A57\u6D3B\u52D5\u5927\u5EF3"
-    sceneIntroduce: "\u73A9\u904A\u6232\u310C\u311A\u310C\u311A"
-    sceneLink: GameLobbyScene
-  sceneIdx: 0
+  - sceneName: 
+    sceneIntroduce: 
+    sceneLink: 
+  - sceneName: 
+    sceneIntroduce: 
+    sceneLink: 
+  - sceneName: 
+    sceneIntroduce: 
+    sceneLink: 
 --- !u!114 &17171307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1708,8 +1707,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 17171306}
-        m_TargetAssemblyTypeName: transferManger, Assembly-CSharp
+      - m_Target: {fileID: 1357422592}
+        m_TargetAssemblyTypeName: transferScene, Assembly-CSharp
         m_MethodName: transferToScene
         m_Mode: 1
         m_Arguments:
@@ -4021,6 +4020,7 @@ GameObject:
   - component: {fileID: 1357422589}
   - component: {fileID: 1357422588}
   - component: {fileID: 1357422587}
+  - component: {fileID: 1357422592}
   - component: {fileID: 1357422591}
   m_Layer: 0
   m_Name: 'EventSystem '
@@ -4112,16 +4112,27 @@ MonoBehaviour:
   sceneTitle: {fileID: 182516219}
   sceneIntroducion: {fileID: 240028258}
   sceneList:
-  - sceneName: "\u548C\u5E73\u5CF6\u5546\u57CE "
-    sceneIntroduce: "\u8CB7\u8CB7\u8CB7\u8CB7\u8CE3\u8CE3\u8CE3\u8CE3\u6771ccc "
-    sceneLink: 'ShoppingScene '
-  - sceneName: "\u535A\u7269\u9928\u5C55\u5340 "
-    sceneIntroduce: "\u4F86\u770B\u770B\u5C0F\u77E5\u8B58\u5427!!!! "
-    sceneLink: 'MuseumScene '
-  - sceneName: "\u9AD4\u9A57\u6D3B\u52D5\u5927\u5EF3 "
-    sceneIntroduce: "\u73A9\u904A\u6232\u310C\u311A\u310C\u311A "
-    sceneLink: GameLobbyScene
-  sceneIdx: 0
+  - sceneName: "\u5546\u57CE"
+    sceneIntroduce: "\u8CB7\u6771\u897F\u8CB7\u6771\u897F"
+    sceneLink: ShoppingScene
+  - sceneName: "\u535A\u7269\u9928"
+    sceneIntroduce: "\u4F86\u535A\u7269\u9928\u770B\u5B88\u8B77\u5CA9\uFF01"
+    sceneLink: MuseumScene
+  - sceneName: "\u7368\u6728\u821F"
+    sceneIntroduce: "\u7368\u6728\u821F\u5212\u5212\u5212"
+    sceneLink: BoatScene
+--- !u!114 &1357422592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357422586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64e972fce9a25c4281dd35f5a61907c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1375671575
 GameObject:
   m_ObjectHideFlags: 0
