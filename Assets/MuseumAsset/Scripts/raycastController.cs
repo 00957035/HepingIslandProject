@@ -47,7 +47,9 @@ public class raycastController : MonoBehaviour
                 }
             }
             if(timer >= 2.0f){
-                remindGameObject.SetActive(false);
+                if(remindGameObject != null){
+                    remindGameObject.SetActive(false);
+                }
                 otherTransform = hit.collider.gameObject.transform;
                 otherChildTransform = otherTransform.Find("infoCanvas");
                 if(otherChildTransform != null){

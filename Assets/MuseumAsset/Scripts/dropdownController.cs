@@ -21,7 +21,7 @@ public class dropdownController : MonoBehaviour //小注意，這是掛在dropdo
     void Start()
     {
         line = thirdPerson.GetComponent<LineRenderer>();
-        line.positionCount = 2;
+
         agent = thirdPerson.GetComponent<NavMeshAgent>(); //獲取人物NavMeshAgent
         path = new NavMeshPath();
     }
@@ -51,6 +51,7 @@ public class dropdownController : MonoBehaviour //小注意，這是掛在dropdo
     }
 
     public void OnValueChanged(int num){
+        line.positionCount = 2;
         if(flag != null){
             foreach(GameObject prefab in flag){
                 Destroy(prefab);
