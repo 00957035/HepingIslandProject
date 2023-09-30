@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1613,6 +1613,9 @@ MonoBehaviour:
   characterDB: {fileID: 11400000, guid: 75b65d24f18f2aa4a8dc2ef31844b57e, type: 2}
   RoleNumber: 9
   nameText: []
+  role1: {fileID: 0}
+  role2: {fileID: 0}
+  role3: {fileID: 0}
 --- !u!114 &563626902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3371,6 +3374,9 @@ MonoBehaviour:
   characterDB: {fileID: 11400000, guid: 75b65d24f18f2aa4a8dc2ef31844b57e, type: 2}
   RoleNumber: 9
   nameText: []
+  role1: {fileID: 0}
+  role2: {fileID: 0}
+  role3: {fileID: 0}
 --- !u!114 &1028695214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3497,6 +3503,9 @@ MonoBehaviour:
   - {fileID: 1789242893}
   - {fileID: 888476729}
   - {fileID: 883902175}
+  role1: {fileID: 563626899}
+  role2: {fileID: 1028695211}
+  role3: {fileID: 1929872803}
 --- !u!4 &1028951539
 Transform:
   m_ObjectHideFlags: 0
@@ -6569,6 +6578,9 @@ MonoBehaviour:
   characterDB: {fileID: 11400000, guid: 75b65d24f18f2aa4a8dc2ef31844b57e, type: 2}
   RoleNumber: 9
   nameText: []
+  role1: {fileID: 0}
+  role2: {fileID: 0}
+  role3: {fileID: 0}
 --- !u!114 &1929872806
 MonoBehaviour:
   m_ObjectHideFlags: 0

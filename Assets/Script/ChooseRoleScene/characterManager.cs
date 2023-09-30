@@ -10,11 +10,14 @@ public class characterManager : MonoBehaviour
     public int RoleNumber ;
     public Text[] nameText = new Text[3];
     //public Sprite currimage;
+    public GameObject role1;
+    public GameObject role2;
+    public GameObject role3;
 
     static public int selectedOption = 0;
     void Start()
     {
-        UpdateCharater(selectedOption);
+        StartCharater();
         //RoleNumber = characterDB.CharacterCount;
     }
 
@@ -52,12 +55,36 @@ public class characterManager : MonoBehaviour
             string aim = "ROLE" + (i+1);
             Image image = GameObject.Find(aim).GetComponent<Image>();//find ROLE1 ROLE2 ROLE3 OBJ
             image.sprite = role.CharSprite;
-
+            Debug.Log(image);
+            Debug.Log(selectedOption);
             Debug.Log(role.CharName);
-            nameText[i].text = role.CharName;
+            nameText[i].text = role.CharName;      
             //Debug.Log("Image Name: " + image.name + "type: " + role.CharSprite);
             selectedOption = (++selectedOption) % RoleNumber;
         }
     }
 
+    private void StartCharater()//0
+    {
+        for(int i = 0; i < 3; i++){
+            if(i == 0){
+                character role = characterDB.GetCharactor(i);//get role info from database
+                Image image = role1.GetComponent<Image>();
+                image.sprite = role.CharSprite;
+                nameText[0].text = role.CharName;
+            }
+            else if(i == 1){
+                character role = characterDB.GetCharactor(i);//get role info from database
+                Image image = role2.GetComponent<Image>();
+                image.sprite = role.CharSprite;
+                nameText[1].text = role.CharName;
+            }
+            else{
+                character role = characterDB.GetCharactor(i);//get role info from database
+                Image image = role3.GetComponent<Image>();
+                image.sprite = role.CharSprite;
+                nameText[2].text = role.CharName;
+            }
+        }
+    }
 }
