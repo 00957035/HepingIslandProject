@@ -29,6 +29,9 @@ TagManager:
   - The Mudskipper
   - The Pharaoh
   - The Seal
+  - poster
+  - "\u6F5B\u6D77\u5065\u5C07"
+  - 0
   layers:
   - Default
   - TransparentFX
