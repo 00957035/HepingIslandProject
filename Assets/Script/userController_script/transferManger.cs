@@ -10,6 +10,8 @@ public class transferManger : MonoBehaviour
 {
     public GameObject transferMenu;
     public GameObject sceneInfo;
+
+    public GameObject closeBtn;
     public Text sceneTitle;
     public Text sceneIntroducion;
     public sceneInformation[] sceneList = new sceneInformation[3];
@@ -21,6 +23,7 @@ public class transferManger : MonoBehaviour
     }
     public void showTransferMunu(){
         transferMenu.SetActive(true);
+        closeBtn.SetActive(true);
     }
     public void ChangeScene(int idx){
         sceneIdx = idx;
@@ -46,6 +49,11 @@ public class transferManger : MonoBehaviour
     public void test()
     {
         Debug.Log("test:"+sceneIdx);
+    }
+
+    public void closeCanvas(){
+        transferMenu.SetActive(false);
+        closeBtn.SetActive(false);
     }
 
 }
