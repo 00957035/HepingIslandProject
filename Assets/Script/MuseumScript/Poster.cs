@@ -13,7 +13,7 @@ public class Poster : MonoBehaviour
     void Start()
     {
         InfoCanvas = GameObject.Find("PosterCanvas").GetComponent<Canvas>();
-        //InfoCanvas.enabled = false;
+        InfoCanvas.enabled = false;
     }
 
     // Update is called once per frame

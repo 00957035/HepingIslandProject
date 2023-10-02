@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   role:
   - CharName: Sophie
-    CharSprite: {fileID: 21300000, guid: 212b467f5c25e0d469a9eca2b184306d, type: 3}
+    CharSprite: {fileID: 21300000, guid: 34a88e6e60effce4b8d8f8829f792bc3, type: 3}
   - CharName: Megan
-    CharSprite: {fileID: 21300000, guid: 733f2bd74a44d7047af2702fe77cf57d, type: 3}
+    CharSprite: {fileID: 21300000, guid: b0f8868c8085d8f43905405dcf41733f, type: 3}
   - CharName: Remy
-    CharSprite: {fileID: 21300000, guid: eefcebd6e71061342a52bf3541e51c0a, type: 3}
+    CharSprite: {fileID: 21300000, guid: ff5751753f074284187a4f703bf9e8bf, type: 3}
   - CharName: Jackie
-    CharSprite: {fileID: 21300000, guid: 6e8a19a83fc2ab04c884e30549381e07, type: 3}
+    CharSprite: {fileID: 21300000, guid: 728efe7a1af383b46aa6547eae22fc9c, type: 3}
   - CharName: Adam
-    CharSprite: {fileID: 21300000, guid: 56480e15f4b06a1419c915af587aac29, type: 3}
+    CharSprite: {fileID: 21300000, guid: 2f205cd2c870ea74389de5b74bc63d71, type: 3}
   - CharName: James
-    CharSprite: {fileID: 21300000, guid: f4e811783022961468b327e910acb717, type: 3}
+    CharSprite: {fileID: 21300000, guid: ffccf91e3e6f27e409b794094732c60a, type: 3}
