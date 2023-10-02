@@ -28,6 +28,11 @@ public class SEplayer : MonoBehaviour
     }
     public void pauseTheMusic()
     {
-        AudioListener.pause = true;
+        if(audioPlayer.mute){
+            audioPlayer.mute = false;
+        }
+        else{
+            audioPlayer.mute = true;
+        }
     }
 }
