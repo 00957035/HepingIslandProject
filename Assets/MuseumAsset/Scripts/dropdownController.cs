@@ -32,9 +32,11 @@ public class dropdownController : MonoBehaviour //小注意，這是掛在dropdo
         if(dropdown.value != 0){ //有選擇物件就導航
             line.positionCount = 2;
             NavMesh.CalculatePath(thirdPerson.transform.position, searchObjectPosition, NavMesh.AllAreas, path);
+            Vector3 path1Vector = (path.corners[1] - path.corners[0]);
+            Vector3 path1 = path.corners[0] + (path1Vector / path1Vector.magnitude); 
             line.SetPosition(0, path.corners[0]);
-            line.SetPosition(1, path.corners[1]);
-            Debug.Log(path.corners[0].GetType());
+            line.SetPosition(1, path1);
+            
         }
         else if(dropdown.value == 0){ //選擇取消導航則取消
             line.positionCount = 0;
