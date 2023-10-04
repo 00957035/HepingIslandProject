@@ -411,6 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transferMenu: {fileID: 1202933178}
   sceneInfo: {fileID: 1473849401}
+  closeBtn: {fileID: 0}
   sceneTitle: {fileID: 182516219}
   sceneIntroducion: {fileID: 240028258}
   sceneList:
@@ -654,7 +655,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4270121822a7bf34fbece1519ae35726, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -942,7 +943,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4270121822a7bf34fbece1519ae35726, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -1014,7 +1015,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4270121822a7bf34fbece1519ae35726, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -4139,7 +4140,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4270121822a7bf34fbece1519ae35726, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -4550,6 +4551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transferMenu: {fileID: 791199345}
   sceneInfo: {fileID: 1473849401}
+  closeBtn: {fileID: 0}
   sceneTitle: {fileID: 182516219}
   sceneIntroducion: {fileID: 240028258}
   sceneList:
